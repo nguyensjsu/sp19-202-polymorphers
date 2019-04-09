@@ -8,15 +8,19 @@
 
 # Team Project Repo 
 
-## Team Name
+## Polymorphers
 
 ## Team Members
+- Shivam
+- Phuong Tran	
+- Vraj
 
 * [Name](url_to_your_github_repo)
 
-## Project Name
+## Project Name: Egg Catcher
 
 ## Project Description
+A game about catching chicken eggs
 
 ## Project Progress
 
@@ -25,3 +29,6 @@
 ### Project Dashboard
 
 ### Individual Contributions
+Week 1:
+April 09, 2019:
+- Phuong Tran: suggested the game and decided to pick Decorator Pattern for the egg type

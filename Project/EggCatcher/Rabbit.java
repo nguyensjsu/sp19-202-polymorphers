@@ -24,9 +24,9 @@ public class Rabbit extends Actor
         int y = getY();
  
         if(Greenfoot.isKeyDown("left")){
-            setLocation(x-20, y);
+            setLocation(x-5, y);
         }else if(Greenfoot.isKeyDown("right")){
-            setLocation(x+20, y);
+            setLocation(x+5, y);
         }
     }    
 }

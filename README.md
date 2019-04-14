@@ -12,7 +12,10 @@
 
 ## Team Members
 
-* [Name](url_to_your_github_repo)
+* [Shivam Waghela](https://github.com/shivamwaghela)
+* [Phuong Tran](https://github.com/fuongbregas)
+* [Viraj Upadhyay](https://github.com/viraj1995)
+
 
 ## Project Name
 

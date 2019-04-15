@@ -8,8 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class One extends Actor
 {
-    
+    GreenfootImage one = new GreenfootImage("One.png");
     public One(){
-        
+        one.scale(52, 114);
+        setImage(one);
     }
+    
 }

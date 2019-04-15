@@ -16,6 +16,7 @@ public class Score
         int i = 0;
         while(i < highscore.length()){
            if(highscore.substring(i, i+1).equals("1")){
+               
                numberList.add(new One());
                i++;
             }

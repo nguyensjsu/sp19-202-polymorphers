@@ -23,22 +23,22 @@ public class Ending extends World
     public Ending()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1920 , 1080, 1);         
+        super(1280, 720, 1);         
         
         startButton = new StartButton();
         switchModeButton = new SwitchModeButton();
         rankingButton = new RankingButton();
         
-        addObject(startButton, 1200, 600);
-        addObject(switchModeButton, 1200, 650);
-        addObject(rankingButton, 1200, 700);
+        addObject(startButton, 800, 400);
+        addObject(switchModeButton, 800, 450);
+        addObject(rankingButton, 800, 500);
         
-        highscore = 2222;
+        highscore = 123456790;
         score = new Score(Integer.toString(highscore));
         numberList = score.getNumberList();
         
         for(int i = 0; i < numberList.size(); i++ ){
-            addObject(numberList.get(i), 800 + i*110, 430);
+            addObject(numberList.get(i), 530 + i*50, 290);
         }
     }
     

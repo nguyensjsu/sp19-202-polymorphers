@@ -26,7 +26,8 @@ public class StartButton extends Button
             setImage(startButtonImage);
             mouseDown = false; 
             
-            //add also the methods you want to execute here;  
+            //add also the methods you want to execute here;
+            
         }
     }    
 }

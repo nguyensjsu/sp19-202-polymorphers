@@ -12,7 +12,7 @@ public class Rabbit extends Actor
     private GreenfootImage rabbitImage = new GreenfootImage("Rabbit.png");
     
     public Rabbit(){
-        rabbitImage.scale(339, 365);
+        rabbitImage.scale(203, 219);
         setImage(rabbitImage);
         
     }
@@ -24,9 +24,9 @@ public class Rabbit extends Actor
         int y = getY();
  
         if(Greenfoot.isKeyDown("left")){
-            setLocation(x-5, y);
+            setLocation(x-10, y);
         }else if(Greenfoot.isKeyDown("right")){
-            setLocation(x+5, y);
+            setLocation(x+10, y);
         }
     }    
 }

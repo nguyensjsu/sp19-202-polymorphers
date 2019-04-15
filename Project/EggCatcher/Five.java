@@ -8,12 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Five extends Actor
 {
-    /**
-     * Act - do whatever the Five wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    GreenfootImage five = new GreenfootImage("Five.png");
+    public Five(){
+        five.scale(52, 114);
+        setImage(five);
+    }
 }

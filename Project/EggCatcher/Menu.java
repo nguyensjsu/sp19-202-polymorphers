@@ -19,13 +19,13 @@ public class Menu extends World
     public Menu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1920, 1080, 1); 
+        super(1280, 720, 1); 
         startButton = new StartButton();
         switchModeButton = new SwitchModeButton();
         rankingButton = new RankingButton();
         
-        addObject(startButton, 960, 600);
-        addObject(switchModeButton, 960, 650);
-        addObject(rankingButton, 960, 700);
+        addObject(startButton, 640, 300);
+        addObject(switchModeButton, 640, 350);
+        addObject(rankingButton, 640, 400);
     }
 }

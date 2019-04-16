@@ -1,18 +1,18 @@
 /**
- * Write a description of class Score here.
+ * Write a description of class SilverEggDecorator here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Score implements IScore
+public class SilverEggDecorator extends EggDecorator 
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class Score
+     * Constructor for objects of class SilverEggDecorator
      */
-    public Score()
+    public SilverEggDecorator()
     {
     }
 

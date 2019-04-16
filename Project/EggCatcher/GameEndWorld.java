@@ -6,7 +6,7 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Ending extends World
+public class GameEndWorld extends World
 {
     
     private StartButton startButton;
@@ -20,7 +20,7 @@ public class Ending extends World
      * Constructor for objects of class Ending.
      * 
      */
-    public Ending()
+    public GameEndWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1);         
@@ -34,12 +34,14 @@ public class Ending extends World
         addObject(rankingButton, 800, 500);
         
         highscore = 123456790;
-        score = new Score(Integer.toString(highscore));
+        
+        // To do: Resolve the score issue (Class name)
+        /*score = new Score(Integer.toString(highscore));
         numberList = score.getNumberList();
         
         for(int i = 0; i < numberList.size(); i++ ){
             addObject(numberList.get(i), 530 + i*50, 290);
-        }
+        }*/
     }
     
     public void setHighScore(int highscore){

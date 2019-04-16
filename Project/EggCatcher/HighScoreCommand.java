@@ -1,18 +1,18 @@
 /**
- * Write a description of class Score here.
+ * Write a description of class HighScoreCommand here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Score implements IScore
+public class HighScoreCommand implements IMenuCommand  
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class Score
+     * Constructor for objects of class HighScoreCommand
      */
-    public Score()
+    public HighScoreCommand()
     {
     }
 

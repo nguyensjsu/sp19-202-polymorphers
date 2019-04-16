@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
-public class Playing extends World
+public class GamePlayWorld extends World
 {
     private Rabbit rabbit;
     private Chicken chicken1;
@@ -23,7 +23,7 @@ public class Playing extends World
      * Constructor for objects of class Playing.
      * 
      */
-    public Playing()
+    public GamePlayWorld()
     {    
         super(1280, 720, 1);
 

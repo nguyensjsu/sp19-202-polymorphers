@@ -1,11 +1,12 @@
 /**
- * Write a description of class IScoreObserver here.
+ * IScoreObserver is an observer interface.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Shivam Waghela
  */
 public interface IScoreObserver  
 {
-    // instance variables - replace the example below with your own
-   
+    /**
+     * Update the score
+     */
+    void scoreUpdate();
 }

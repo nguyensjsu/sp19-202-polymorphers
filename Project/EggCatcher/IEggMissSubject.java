@@ -1,13 +1,24 @@
 /**
- * Write a description of class IEggMissSubject here.
+ * IEggMissSubject is an Observable interface.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Shivam Waghela
  */
 public interface IEggMissSubject  
 {
-    // instance variables - replace the example below with your own
-    
+    /**
+     * Add Observer to Subscribers List
+     * @param obj Observer Object
+     */
+    void addObserver( IEggMissObserver obj ) ;
 
- 
+    /**
+     * Remove Observer from Subscription
+     * @param obj Observer Object
+     */
+    void removeObserver( IEggMissObserver obj ) ;
+
+    /**
+     * Trigger Events to Observers
+     */
+    void notifyObservers();
 }

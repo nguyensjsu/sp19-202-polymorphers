@@ -1,4 +1,13 @@
 #BlueJ class context
 comment0.target=IEggMissSubject
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ IEggMissSubject\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-numComments=1
+comment0.text=\n\ IEggMissSubject\ is\ an\ Observable\ interface.\n\ \n\ @author\ Shivam\ Waghela\n
+comment1.params=obj
+comment1.target=void\ addObserver(IEggMissObserver)
+comment1.text=\n\ Add\ Observer\ to\ Subscribers\ List\n\ @param\ obj\ Observer\ Object\n
+comment2.params=obj
+comment2.target=void\ removeObserver(IEggMissObserver)
+comment2.text=\n\ Remove\ Observer\ from\ Subscription\n\ @param\ obj\ Observer\ Object\n
+comment3.params=
+comment3.target=void\ notifyObservers()
+comment3.text=\n\ Trigger\ Events\ to\ Observers\n
+numComments=4

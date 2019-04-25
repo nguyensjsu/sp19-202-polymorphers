@@ -1,30 +1,22 @@
-/**
- * Write a description of class SilverEggDecorator here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class SilverEggDecorator extends EggDecorator 
+import greenfoot.*;
+
+public class SilverEggDecorator extends WhiteEgg
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private GreenfootImage silverEggImage = new GreenfootImage("SilverEgg.png");
 
     /**
      * Constructor for objects of class SilverEggDecorator
      */
     public SilverEggDecorator()
     {
+        silverEggImage.scale(30,45);
+        setImage(silverEggImage);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    
+    
+    public int eggValue()
     {
-        // put your code here
-        return x + y;
+        return 5;
     }
 }

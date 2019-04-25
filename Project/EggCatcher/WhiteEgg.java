@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WhiteEgg extends Actor
+public class WhiteEgg extends Actor implements IEgg
 {
     private GreenfootImage whiteEggImage = new GreenfootImage("WhiteEgg.png");
     
@@ -16,15 +16,15 @@ public class WhiteEgg extends Actor
     }
     
     public void act() 
-    {   /*
-        int random = (int)(Math.random() * 4) + 1;
-        if(random == 1){
-            
-        }*/
+    {   
         setLocation(this.getX(),this.getY()+2);
         
         if (getY() > 710) {
             getWorld().removeObject(this);
         }
-    }    
+    }
+    
+    public int eggValue(){
+        return 1;
+    }
 }

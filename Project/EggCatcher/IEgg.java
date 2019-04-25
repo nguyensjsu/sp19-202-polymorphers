@@ -6,6 +6,6 @@
  */
 public interface IEgg  
 {
-    // instance variables - replace the example below with your own
+    public int eggValue();
     
 }

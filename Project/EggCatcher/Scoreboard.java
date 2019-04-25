@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ScoreBoard 
+public class Scoreboard
 {
     /**
      * Act - do whatever the Scoreboard wants to do. This method is called whenever

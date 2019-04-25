@@ -1,30 +1,17 @@
-/**
- * Write a description of class Egg here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Egg implements IEgg
-{
-    // instance variables - replace the example below with your own
-    private int x;
+import greenfoot.*;
 
+public class Egg implements IEgg 
+{
+    
     /**
      * Constructor for objects of class Egg
      */
     public Egg()
     {
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    // Implementation for IEgg methods
+    public int eggValue(){
+        return 0;
     }
 }

@@ -1,30 +1,67 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 /**
  * Write a description of class Score here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Score implements IScore
+public class Score 
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Score
-     */
-    public Score()
-    {
+    private ArrayList<Actor> numberList;
+    
+    
+    public Score(String highscore){
+        numberList = new ArrayList<>();
+        int i = 0;
+        while(i < highscore.length()){
+           if(highscore.substring(i, i+1).equals("1")){
+               
+               numberList.add(new One());
+               i++;
+            }
+            else if (highscore.substring(i, i+1).equals("2")){
+               numberList.add(new Two());
+               i++;
+            }
+            else if (highscore.substring(i, i+1).equals("3")){
+               numberList.add(new Three());
+               i++;
+            }
+            else if (highscore.substring(i, i+1).equals("4")){
+               numberList.add(new Four());
+               i++;
+            }
+            else if (highscore.substring(i, i+1).equals("5")){
+               numberList.add(new Five());
+               i++;
+            }
+            else if (highscore.substring(i, i+1).equals("6")){
+               numberList.add(new Six());
+               i++;
+            }
+            else if (highscore.substring(i, i+1).equals("7")){
+               numberList.add(new Seven());
+               i++;
+            }
+            else if (highscore.substring(i, i+1).equals("8")){
+               numberList.add(new Eight());
+               i++;
+            }
+            else if (highscore.substring(i, i+1).equals("9")){
+               numberList.add(new Nine());
+               i++;
+            }
+            else{
+               numberList.add(new Zero());
+               i++; 
+            }
+        }
+        
+        
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public ArrayList<Actor> getNumberList(){
+        return numberList; 
     }
 }

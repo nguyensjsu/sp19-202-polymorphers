@@ -22,6 +22,7 @@ public class Playing extends World
     private WhiteEgg extraWhiteEgg;
     private WhiteEgg goldenEgg;
     private WhiteEgg silverEgg;
+    private Basket basket;
     private Scoreboard board;
     
     private long lastAdded = System.currentTimeMillis();
@@ -52,6 +53,7 @@ public class Playing extends World
         extraWhiteEgg = new WhiteEgg();
         silverEgg = new SilverEggDecorator();
         goldenEgg = new GoldenEggDecorator();
+        basket = new Basket();
 
         addObject(chicken1, 100, 120);
         addObject(chicken2, 340, 120);
@@ -60,6 +62,7 @@ public class Playing extends World
         addObject(brokenEgg, 1020, 437);
         addObject(brokenEgg2, 1115, 437);
         addObject(brokenEgg3, 1210, 437);
+        addObject(basket, 1150, 660);
 
         addObject(rabbit, 640, 610);
         

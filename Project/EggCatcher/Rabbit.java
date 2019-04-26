@@ -30,14 +30,15 @@ public class Rabbit extends Actor implements IScoreSubject
             setLocation(x+10, y);
         }
         
-   
-        if (isTouching(GoldenEggDecorator.class)) {
+        
+        
+        if (isTouching(GoldenEggDecorator.class) ) {
             removeTouching(GoldenEggDecorator.class);
             notifyObservers(new GoldenEggDecorator());
-        } else if (isTouching(SilverEggDecorator.class)) {
+        } else if (isTouching(SilverEggDecorator.class) ) {
             removeTouching(SilverEggDecorator.class);
             notifyObservers(new SilverEggDecorator());
-        } else if (isTouching(WhiteEgg.class)) {
+        } else if (isTouching(WhiteEgg.class) ) {
             removeTouching(WhiteEgg.class);
             notifyObservers(new WhiteEgg());
         }

@@ -23,6 +23,6 @@ public class Scoreboard extends Actor implements IScoreObserver
      */
     public void scoreUpdate(IEgg e) {
         score += e.eggValue();
-        System.out.println(score);
+        //System.out.println(score);
     }
 }

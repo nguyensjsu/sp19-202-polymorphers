@@ -20,5 +20,5 @@ public interface IScoreSubject
     /**
      * Trigger Events to Observers
      */
-    void notifyObservers();
+    void notifyObservers( IEgg e );
 }

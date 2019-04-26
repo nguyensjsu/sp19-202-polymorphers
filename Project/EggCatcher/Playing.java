@@ -94,7 +94,7 @@ public class Playing extends World
             lastAdded  = curTime;
         }
         
-        showText(Integer.toString(board.score), 1000, 500);
+        showText(Integer.toString(board.score), 1100, 365);
     }
    
     

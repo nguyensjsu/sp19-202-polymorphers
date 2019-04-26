@@ -30,10 +30,18 @@ public class Rabbit extends Actor implements IScoreSubject
             setLocation(x+10, y);
         }
         
-        if (isTouching(WhiteEgg.class)) {
+   
+        if (isTouching(GoldenEggDecorator.class)) {
+            removeTouching(GoldenEggDecorator.class);
+            notifyObservers(new GoldenEggDecorator());
+        } else if (isTouching(SilverEggDecorator.class)) {
+            removeTouching(SilverEggDecorator.class);
+            notifyObservers(new SilverEggDecorator());
+        } else if (isTouching(WhiteEgg.class)) {
             removeTouching(WhiteEgg.class);
-            notifyObservers();
+            notifyObservers(new WhiteEgg());
         }
+       
     } 
     
     
@@ -56,9 +64,9 @@ public class Rabbit extends Actor implements IScoreSubject
     /**
      * Trigger Events to Observers
      */
-    public void notifyObservers() {
+    public void notifyObservers(IEgg e) {
         for (IScoreObserver o : observers) {
-            o.scoreUpdate();
+            o.scoreUpdate(e);
         }   
     }
 }

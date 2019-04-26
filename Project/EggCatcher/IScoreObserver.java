@@ -8,5 +8,5 @@ public interface IScoreObserver
     /**
      * Update the score
      */
-    void scoreUpdate();
+    void scoreUpdate(IEgg e);
 }

@@ -11,12 +11,12 @@ public class WhiteEgg extends Actor implements IEgg
     private GreenfootImage whiteEggImage = new GreenfootImage("WhiteEgg.png");
     
     public WhiteEgg(){
-        whiteEggImage.scale(30,45);
+        whiteEggImage.scale(25,39);
         setImage(whiteEggImage);
     }
     
     public void act() 
-    {   
+    {           
         setLocation(this.getX(),this.getY()+2);
         
         if (getY() > 710) {

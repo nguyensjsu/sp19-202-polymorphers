@@ -8,7 +8,7 @@ public class GoldenEggDecorator extends WhiteEgg
      */
     public GoldenEggDecorator()
     {
-        goldenEggImage.scale(30,45);
+        goldenEggImage.scale(30,35);
         setImage(goldenEggImage);
     }
     

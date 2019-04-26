@@ -9,13 +9,13 @@ public interface IScoreSubject
      * Add Observer to Subscribers List
      * @param obj Observer Object
      */
-    void addObserver( IEggMissObserver obj ) ;
+    void addObserver( IScoreObserver obj ) ;
 
     /**
      * Remove Observer from Subscription
      * @param obj Observer Object
      */
-    void removeObserver( IEggMissObserver obj ) ;
+    void removeObserver( IScoreObserver obj ) ;
 
     /**
      * Trigger Events to Observers

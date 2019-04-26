@@ -3,17 +3,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Scoreboard here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Shivam Waghela 
  */
-public class Scoreboard
+public class Scoreboard extends Actor implements IScoreObserver
 {
+    public int score = 0;
     /**
      * Act - do whatever the Scoreboard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        
+    }   
+   
+    
+    /**
+     * Update the score
+     */
+    public void scoreUpdate() {
+        score += 1;
+        System.out.println(score);
+    }
 }

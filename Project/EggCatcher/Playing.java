@@ -22,6 +22,7 @@ public class Playing extends World
     private WhiteEgg extraWhiteEgg;
     private WhiteEgg goldenEgg;
     private WhiteEgg silverEgg;
+    private Scoreboard board;
     
     private long lastAdded = System.currentTimeMillis();
 
@@ -62,6 +63,12 @@ public class Playing extends World
 
         addObject(rabbit, 640, 610);
         
+        
+        // Add observer
+        board = new Scoreboard();
+        rabbit.addObserver(board);
+        addObject(board, 1000, 437);
+        
     }
 
     public void act() 
@@ -87,6 +94,7 @@ public class Playing extends World
             lastAdded  = curTime;
         }
         
+        showText(Integer.toString(board.score), 1000, 500);
     }
    
     

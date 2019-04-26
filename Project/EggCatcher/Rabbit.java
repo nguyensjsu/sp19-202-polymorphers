@@ -11,11 +11,13 @@ public class Rabbit extends Actor implements IScoreSubject
     private int speed = 5;
     private GreenfootImage rabbitImage = new GreenfootImage("Rabbit.png");
     private ArrayList<IScoreObserver> observers = new ArrayList<>();
+    private ArrayList<IEgg> eggList = new ArrayList<>();
     
-    public Rabbit(){
+    private IEggState current = new NoEggState();
+    
+    public Rabbit() {
         rabbitImage.scale(203, 219);
         setImage(rabbitImage);
-        
     }
     
     public void act() 
@@ -31,16 +33,31 @@ public class Rabbit extends Actor implements IScoreSubject
         }
         
         
+        // go back to no egg state when it empties in the collector
+        if (isTouching(Basket.class) && !(current instanceof NoEggState)) {
+            current = new NoEggState();
+            for (IEgg egg : eggList) {
+                notifyObservers(egg);
+            }
+            eggList = new ArrayList();
+            
+        }
         
         if (isTouching(GoldenEggDecorator.class) ) {
             removeTouching(GoldenEggDecorator.class);
-            notifyObservers(new GoldenEggDecorator());
+            current = current.nextState();
+            if (!(current instanceof FullEggState)) 
+                eggList.add(new GoldenEggDecorator());
         } else if (isTouching(SilverEggDecorator.class) ) {
             removeTouching(SilverEggDecorator.class);
-            notifyObservers(new SilverEggDecorator());
+            current = current.nextState();
+            if (!(current instanceof FullEggState))
+                eggList.add(new SilverEggDecorator());
         } else if (isTouching(WhiteEgg.class) ) {
             removeTouching(WhiteEgg.class);
-            notifyObservers(new WhiteEgg());
+            current = current.nextState();
+            if (!(current instanceof FullEggState))
+                eggList.add(new WhiteEgg());
         }
        
     } 

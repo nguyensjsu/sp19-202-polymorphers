@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EggCollector implements IEggCollector, IEggState 
+public class EggCollector implements IEggCollector 
 {
     // instance variables - replace the example below with your own
     private int x;

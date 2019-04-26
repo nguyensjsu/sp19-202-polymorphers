@@ -1,17 +1,17 @@
 #BlueJ class context
 comment0.target=Rabbit
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Chicken\ here.\r\n\ \r\n\ @author\ Shivam\ Waghela\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Chicken\ here.\n\ \n\ @author\ Shivam\ Waghela\n
 comment1.params=
 comment1.target=Rabbit()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=obj
 comment3.target=void\ addObserver(IScoreObserver)
-comment3.text=\r\n\ Add\ Observer\ to\ Subscribers\ List\r\n\ @param\ obj\ Observer\ Object\r\n
+comment3.text=\n\ Add\ Observer\ to\ Subscribers\ List\n\ @param\ obj\ Observer\ Object\n
 comment4.params=obj
 comment4.target=void\ removeObserver(IScoreObserver)
-comment4.text=\r\n\ Remove\ Observer\ from\ Subscription\r\n\ @param\ obj\ Observer\ Object\r\n
+comment4.text=\n\ Remove\ Observer\ from\ Subscription\n\ @param\ obj\ Observer\ Object\n
 comment5.params=e
 comment5.target=void\ notifyObservers(IEgg)
-comment5.text=\r\n\ Trigger\ Events\ to\ Observers\r\n
+comment5.text=\n\ Trigger\ Events\ to\ Observers\n
 numComments=6

@@ -6,5 +6,5 @@
  */
 public interface IEggState  
 {
-    // instance variables - replace the example below with your own
+    public IEggState nextState();
 }

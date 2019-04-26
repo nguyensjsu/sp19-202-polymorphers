@@ -19,8 +19,11 @@ public class Playing extends World
     private BrokenEgg brokenEgg2;
     private BrokenEgg brokenEgg3;
     private WhiteEgg whiteEgg;
+    private WhiteEgg extraWhiteEgg;
     private WhiteEgg goldenEgg;
     private WhiteEgg silverEgg;
+    
+    private long lastAdded = System.currentTimeMillis();
 
     /**
      * Constructor for objects of class Playing.
@@ -45,6 +48,7 @@ public class Playing extends World
         brokenEgg3 = new BrokenEgg();
         
         whiteEgg = new WhiteEgg();
+        extraWhiteEgg = new WhiteEgg();
         silverEgg = new SilverEggDecorator();
         goldenEgg = new GoldenEggDecorator();
 
@@ -63,57 +67,47 @@ public class Playing extends World
     public void act() 
     
     {   
-        addObjectEgg(); 
+         
+        long curTime  = System.currentTimeMillis();
+        if (curTime >= lastAdded + 1900) //5000ms = 5s
+        {            
+            int random = (int)(Math.random() * 4) + 1;
+            if(random == 1 ){
+               addObject(eggType(), 100, 150); 
+            }
+            else if (random == 2){
+               addObject(eggType(), 340, 150); 
+            }
+            else if (random == 3){
+               addObject(eggType(), 580, 150);  
+            }
+            else{
+               addObject(eggType(), 820, 150);  
+            }
+            lastAdded  = curTime;
+        }
         
     }
    
     
-    public void addObjectEgg(){
-        int rand = (int)(Math.random() * 3) + 1;
-        int random = (int)(Math.random() * 4) + 1;
+    public WhiteEgg eggType(){
+        int rand = (int)(Math.random() * 3) + 1;       
               
-        if(random == 1 && rand == 1){
-            addObject(whiteEgg, 100, 150);
-        }
-        else if (random == 2 && rand == 1){
-            addObject(whiteEgg, 340, 150); 
-        }
-        else if (random == 3 && rand == 1){
-            addObject(whiteEgg, 580, 150);                
-        }
-        else if (random == 4 && rand == 1){
-            addObject(whiteEgg, 820, 150);     
-        }
-        else if(random == 1 && rand == 2){
-            addObject(silverEgg, 100, 150);
-        }
-        else if (random == 2 && rand == 2){
-           addObject(silverEgg, 340, 150);
-           
-        }
-        else if (random == 3 && rand == 2){
-           addObject(silverEgg, 580, 150);
-           
-        }
-        else if (random == 4 && rand == 2){
-           addObject(silverEgg, 820, 150);
-           
-        }
-        else if(random == 1 && rand == 3){
-            addObject(goldenEgg, 100, 150);
-        }
-        else if (random == 2 && rand == 3){
-           addObject(goldenEgg, 340, 150);
-           
-        }
-        else if (random == 3 && rand == 3){
-           addObject(goldenEgg, 580, 150);
-           
-        }
-        else if (random == 4 && rand == 3){
-           addObject(goldenEgg, 820, 150);
-           
+        if(rand == 1){
+            whiteEgg = extraWhiteEgg;
+            //addObject(whiteEgg, 100, 150);
         }
         
+        else if(rand == 2){
+            whiteEgg = silverEgg;
+            //addObject(whiteEgg, 100, 150);
+        }
+        
+        else if(rand == 3){
+           whiteEgg = goldenEgg;
+           //addObject(whiteEgg, 100, 150);
+        }
+        
+      return whiteEgg;
     }
 }

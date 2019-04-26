@@ -9,5 +9,5 @@ comment2.target=void\ init()
 comment3.params=
 comment3.target=void\ act()
 comment4.params=
-comment4.target=void\ addObjectEgg()
+comment4.target=WhiteEgg\ eggType()
 numComments=5

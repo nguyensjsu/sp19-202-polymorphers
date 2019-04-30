@@ -27,9 +27,19 @@ public class Rabbit extends Actor implements IScoreSubject
         int y = getY();
  
         if(Greenfoot.isKeyDown("left")){
+            if (x <= 100){
+                setLocation(x, y);
+            }
+            else{
             setLocation(x-10, y);
+        }
         }else if(Greenfoot.isKeyDown("right")){
+            if(x >= 1000){
+                setLocation(x, y);
+            }
+            else{
             setLocation(x+10, y);
+        }
         }
         
         

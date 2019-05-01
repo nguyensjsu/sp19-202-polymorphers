@@ -19,11 +19,6 @@ public class EggMiss extends Actor implements IEggMissObserver
      * Update the Egg miss count 
      */
     public void eggMissUpdate(){
-        if (lives > 0) {
-            lives -= 1;
-        }
-        else {
-            //
-        }
+        lives -= 1;
     }
 }

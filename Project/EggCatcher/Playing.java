@@ -10,6 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Playing extends World
 {
+    private GameEndWorld gameEndWorld;
     private Rabbit rabbit;
     private Chicken chicken1;
     private Chicken chicken2;
@@ -41,6 +42,9 @@ public class Playing extends World
 
     public void init(){
         Greenfoot.setSpeed(100);
+        
+        gameEndWorld = new GameEndWorld();
+        
         chicken1 = new Chicken();
         chicken2 = new Chicken();
         chicken3 = new Chicken();
@@ -101,6 +105,11 @@ public class Playing extends World
                addObject(eggType(), 820, 150);  
             }
             lastAdded  = curTime;
+        }
+        
+        if (eggMiss.lives < 0) {
+            // switch to end world
+            Greenfoot.setWorld(gameEndWorld);
         }
         
         // displays score

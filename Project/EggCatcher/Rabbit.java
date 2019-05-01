@@ -9,11 +9,12 @@ import java.util.ArrayList;
 public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
 {
     private int speed = 5;
-    private GreenfootImage rabbitImage = new GreenfootImage("Rabbit.png");
+    private GreenfootImage rabbitImage = new GreenfootImage("RabbitNoEggState.png");
     private ArrayList<IScoreObserver> observers = new ArrayList<>();
     private ArrayList<IEgg> eggList = new ArrayList<>();
     private ArrayList<IEggMissObserver> eggMissObservers = new ArrayList<>();
     
+    /* stores the state of rabbit */
     private IEggState current = new NoEggState();
     
     public Rabbit() {
@@ -77,8 +78,19 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
                 notifyObservers();
         }
         
-        
-       
+       String image = "RabbitNoEggState.png";
+       if ( current instanceof NoEggState ) {
+           image = "RabbitNoEggState.png";
+       } else if ( current instanceof OneEggState ) {
+           image = "RabbitOneEggState.png";
+       } else if ( current instanceof TwoEggState ) {
+           image = "RabbitTwoEggState.png";
+       } else if ( current instanceof ThreeEggState || current instanceof FullEggState ) {
+           image = "RabbitThreeEggState.png";
+        }
+       rabbitImage = new GreenfootImage(image);
+       rabbitImage.scale(203, 219);
+       setImage(rabbitImage);
     } 
     
     

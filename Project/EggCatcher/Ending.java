@@ -33,7 +33,7 @@ public class Ending extends World
         addObject(switchModeButton, 800, 450);
         addObject(rankingButton, 800, 500);
         
-        highscore = 123456790;
+        highscore = 345;
         score = new Score(Integer.toString(highscore));
         numberList = score.getNumberList();
         

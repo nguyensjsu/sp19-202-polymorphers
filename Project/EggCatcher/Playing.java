@@ -1,6 +1,6 @@
 
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class Playing here.
  * 
@@ -26,6 +26,8 @@ public class Playing extends World
     private Basket basket;
     private Scoreboard board;
     private EggMiss eggMiss;
+    private Score score;
+    private ArrayList<Actor> numberList = new ArrayList<>();
     
     private long lastAdded = System.currentTimeMillis();
 
@@ -128,7 +130,16 @@ public class Playing extends World
         }
         
         // displays score
-        showText(Integer.toString(board.score), 1100, 365);
+        for(int i = 0; i < numberList.size(); i++ ){
+            removeObject(numberList.get(i));
+        }
+        score = new Score(Integer.toString(board.score));
+        numberList = score.getNumberList();
+        
+        for(int i = 0; i < numberList.size(); i++ ){
+            addObject(numberList.get(i), 1100 + i*50, 365);
+        }
+        showText(Integer.toString(board.score), 1100, 165);
     }
    
     

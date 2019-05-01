@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.target=Ending
 comment0.text=\n\ Write\ a\ description\ of\ class\ Ending\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=Ending()
+comment1.params=finalscore
+comment1.target=Ending(int)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Ending.\n\ \n
-comment2.params=highscore
-comment2.target=void\ setHighScore(int)
+comment2.params=finalscore
+comment2.target=void\ setFinalScore(int)
 comment3.params=
-comment3.target=int\ getHighScore()
+comment3.target=int\ getFinalScore()
 numComments=4

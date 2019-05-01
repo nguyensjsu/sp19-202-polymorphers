@@ -45,8 +45,6 @@ public class Playing extends World
     public void init(){
         Greenfoot.setSpeed(100);
         
-        gameEndWorld = new Ending();
-        
         chicken1 = new Chicken();
         chicken2 = new Chicken();
         chicken3 = new Chicken();
@@ -69,7 +67,7 @@ public class Playing extends World
         addObject(basket, 1150, 660);
 
         addObject(rabbit, 640, 610);
-        
+       
         
         // Add observer for scoreboard
         board = new Scoreboard();
@@ -81,7 +79,6 @@ public class Playing extends World
         silverEgg.addObserver(eggMiss);
         goldenEgg.addObserver(eggMiss);
         rabbit.addObserver(eggMiss);
-        
     }
 
     public void act() 
@@ -107,13 +104,13 @@ public class Playing extends World
             lastAdded  = curTime;
         }
         
-        if (eggMiss.lives < 0) {
+        if (eggMiss.lives < 1) {
             // switch to end world
-            Greenfoot.setWorld(gameEndWorld);
+            Greenfoot.setWorld(new Ending(board.score));
         }
         
         // show lives aka broken eggs'
-        System.out.println(eggMiss.lives);
+        // System.out.println(eggMiss.lives);
         switch (eggMiss.lives) {
             case 3: break; // don't display anything
             case 2: 

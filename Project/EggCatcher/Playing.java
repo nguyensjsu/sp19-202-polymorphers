@@ -64,9 +64,6 @@ public class Playing extends World
         addObject(chicken2, 340, 120);
         addObject(chicken3, 580, 120);
         addObject(chicken4, 820, 120);
-        addObject(brokenEgg, 1020, 437);
-        addObject(brokenEgg2, 1115, 437);
-        addObject(brokenEgg3, 1210, 437);
         addObject(basket, 1150, 660);
 
         addObject(rabbit, 640, 610);
@@ -113,11 +110,25 @@ public class Playing extends World
             Greenfoot.setWorld(gameEndWorld);
         }
         
+        // show lives aka broken eggs'
+        System.out.println(eggMiss.lives);
+        switch (eggMiss.lives) {
+            case 3: break; // don't display anything
+            case 2: 
+                addObject(brokenEgg, 1020, 437); break;
+            case 1:
+                addObject(brokenEgg, 1020, 437);
+                addObject(brokenEgg2, 1115, 437); break;
+            case 0:
+                addObject(brokenEgg, 1020, 437);
+                addObject(brokenEgg2, 1115, 437); 
+                addObject(brokenEgg3, 1210, 437); break;
+            default: 
+                System.out.println("cannot display lives"); 
+        }
+        
         // displays score
         showText(Integer.toString(board.score), 1100, 365);
-        
-        // displays lives
-        showText(Integer.toString(eggMiss.lives), 1140, 365);
     }
    
     

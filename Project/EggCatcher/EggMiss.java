@@ -1,13 +1,12 @@
+import greenfoot.*;
 /**
  * Write a description of class EggMiss here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Shivam Waghela
  */
-public class EggMiss 
+public class EggMiss extends Actor implements IEggMissObserver
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    public int lives = 3;
 
     /**
      * Constructor for objects of class EggMiss
@@ -17,14 +16,14 @@ public class EggMiss
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Update the Egg miss count 
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void eggMissUpdate(){
+        if (lives > 0) {
+            lives -= 1;
+        }
+        else {
+            //
+        }
     }
 }

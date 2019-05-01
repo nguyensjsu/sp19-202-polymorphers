@@ -24,6 +24,7 @@ public class Playing extends World
     private WhiteEgg silverEgg;
     private Basket basket;
     private Scoreboard board;
+    private EggMiss eggMiss;
     
     private long lastAdded = System.currentTimeMillis();
 
@@ -67,10 +68,15 @@ public class Playing extends World
         addObject(rabbit, 640, 610);
         
         
-        // Add observer
+        // Add observer for scoreboard
         board = new Scoreboard();
         rabbit.addObserver(board);
-        addObject(board, 1000, 437);
+        
+        // Add observer for Lives
+        eggMiss = new EggMiss();
+        extraWhiteEgg.addObserver(eggMiss);
+        silverEgg.addObserver(eggMiss);
+        goldenEgg.addObserver(eggMiss);
         
     }
 
@@ -97,7 +103,11 @@ public class Playing extends World
             lastAdded  = curTime;
         }
         
+        // displays score
         showText(Integer.toString(board.score), 1100, 365);
+        
+        // displays lives
+        showText(Integer.toString(eggMiss.lives), 1140, 365);
     }
    
     

@@ -8,4 +8,5 @@ public interface IMenuReceiver
 {
     // instance variables - replace the example below with your own
    
+   
 }

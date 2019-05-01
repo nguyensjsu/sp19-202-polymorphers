@@ -17,7 +17,7 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
     
     public void act() 
     {           
-        setLocation(this.getX(),this.getY()+2);
+        setLocation(this.getX(),this.getY()+4);
         
         /*
         if (getY() > 550) {

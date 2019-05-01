@@ -4,8 +4,9 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public interface IMenuCommand extends IMenuReceiver 
+public interface IMenuCommand 
 {
-    // instance variables - replace the example below with your own
+    
+    void execute();
     
 }

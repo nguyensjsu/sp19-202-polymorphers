@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=WhiteEgg
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ WhiteEgg\ here.\r\n\ \r\n\ @author\ Phoung\ Tran,\ Shivam\ Waghela\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ WhiteEgg\ here.\n\ \n\ @author\ Phoung\ Tran,\ Shivam\ Waghela\n
 comment1.params=
 comment1.target=WhiteEgg()
 comment2.params=
@@ -9,11 +9,11 @@ comment3.params=
 comment3.target=int\ eggValue()
 comment4.params=obj
 comment4.target=void\ addObserver(IEggMissObserver)
-comment4.text=\r\n\ Add\ Observer\ to\ Subscribers\ List\r\n\ @param\ obj\ Observer\ Object\r\n
+comment4.text=\n\ Add\ Observer\ to\ Subscribers\ List\n\ @param\ obj\ Observer\ Object\n
 comment5.params=obj
 comment5.target=void\ removeObserver(IEggMissObserver)
-comment5.text=\r\n\ Remove\ Observer\ from\ Subscription\r\n\ @param\ obj\ Observer\ Object\r\n
+comment5.text=\n\ Remove\ Observer\ from\ Subscription\n\ @param\ obj\ Observer\ Object\n
 comment6.params=
 comment6.target=void\ notifyObservers()
-comment6.text=\r\n\ Trigger\ Events\ to\ Observers\r\n
+comment6.text=\n\ Trigger\ Events\ to\ Observers\n
 numComments=7

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Playing extends World
 {
-    private GameEndWorld gameEndWorld;
+    private Ending gameEndWorld;
     private Rabbit rabbit;
     private Chicken chicken1;
     private Chicken chicken2;
@@ -45,7 +45,7 @@ public class Playing extends World
     public void init(){
         Greenfoot.setSpeed(100);
         
-        gameEndWorld = new GameEndWorld();
+        gameEndWorld = new Ending();
         
         chicken1 = new Chicken();
         chicken2 = new Chicken();
@@ -137,9 +137,8 @@ public class Playing extends World
         numberList = score.getNumberList();
         
         for(int i = 0; i < numberList.size(); i++ ){
-            addObject(numberList.get(i), 1100 + i*50, 365);
+            addObject(numberList.get(i), 1090 + i*50, 365);
         }
-        showText(Integer.toString(board.score), 1100, 165);
     }
    
     

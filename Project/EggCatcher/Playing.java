@@ -81,6 +81,7 @@ public class Playing extends World
         extraWhiteEgg.addObserver(eggMiss);
         silverEgg.addObserver(eggMiss);
         goldenEgg.addObserver(eggMiss);
+        rabbit.addObserver(eggMiss);
         
     }
 

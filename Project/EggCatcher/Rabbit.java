@@ -6,12 +6,13 @@ import java.util.ArrayList;
  * 
  * @author Shivam Waghela
  */
-public class Rabbit extends Actor implements IScoreSubject
+public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
 {
     private int speed = 5;
     private GreenfootImage rabbitImage = new GreenfootImage("Rabbit.png");
     private ArrayList<IScoreObserver> observers = new ArrayList<>();
     private ArrayList<IEgg> eggList = new ArrayList<>();
+    private ArrayList<IEggMissObserver> eggMissObservers = new ArrayList<>();
     
     private IEggState current = new NoEggState();
     
@@ -58,17 +59,25 @@ public class Rabbit extends Actor implements IScoreSubject
             current = current.nextState();
             if (!(current instanceof FullEggState)) 
                 eggList.add(new GoldenEggDecorator());
+            else
+                notifyObservers();
         } else if (isTouching(SilverEggDecorator.class) ) {
             removeTouching(SilverEggDecorator.class);
             current = current.nextState();
             if (!(current instanceof FullEggState))
                 eggList.add(new SilverEggDecorator());
+            else
+                notifyObservers();
         } else if (isTouching(WhiteEgg.class) ) {
             removeTouching(WhiteEgg.class);
             current = current.nextState();
             if (!(current instanceof FullEggState))
                 eggList.add(new WhiteEgg());
+            else
+                notifyObservers();
         }
+        
+        
        
     } 
     
@@ -96,5 +105,31 @@ public class Rabbit extends Actor implements IScoreSubject
         for (IScoreObserver o : observers) {
             o.scoreUpdate(e);
         }   
+    }
+    
+    
+    /**
+     * Add Observer to Subscribers List
+     * @param obj Observer Object
+     */
+    public void addObserver( IEggMissObserver obj ) {
+        eggMissObservers.add( obj );
+    }
+
+    /**
+     * Remove Observer from Subscription
+     * @param obj Observer Object
+     */
+    public void removeObserver( IEggMissObserver obj ) {
+        eggMissObservers.remove( obj );
+    }
+
+    /**
+     * Trigger Events to Observers
+     */
+    public void notifyObservers() {
+        for (IEggMissObserver o : eggMissObservers) {
+            o.eggMissUpdate();
+        }  
     }
 }

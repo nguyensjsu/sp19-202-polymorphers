@@ -8,6 +8,7 @@ public class HardStrategy implements IStrategy
 {
     // instance variables - replace the example below with your own
    public void setMode(){
-       
+       WhiteEgg strategy = new WhiteEgg();
+       strategy.hard();
     };
 }

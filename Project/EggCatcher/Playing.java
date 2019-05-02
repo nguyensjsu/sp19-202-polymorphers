@@ -90,15 +90,19 @@ public class Playing extends World
         {            
             int random = (int)(Math.random() * 4) + 1;
             if(random == 1 ){
+               playSound();
                addObject(eggType(), 100, 150); 
             }
             else if (random == 2){
+               playSound();
                addObject(eggType(), 340, 150); 
             }
             else if (random == 3){
+               playSound();
                addObject(eggType(), 580, 150);  
             }
             else{
+               playSound();
                addObject(eggType(), 820, 150);  
             }
             lastAdded  = curTime;
@@ -140,23 +144,55 @@ public class Playing extends World
    
     
     public WhiteEgg eggType(){
-        int rand = (int)(Math.random() * 3) + 1;       
+        int rand = (int)(Math.random() * 10) + 1;       
               
-        if(rand == 1){
+        if(rand >= 1 && rand <= 5){
             whiteEgg = extraWhiteEgg;
             //addObject(whiteEgg, 100, 150);
         }
         
-        else if(rand == 2){
+        else if(rand >= 6 && rand <= 8){
             whiteEgg = silverEgg;
             //addObject(whiteEgg, 100, 150);
         }
         
-        else if(rand == 3){
+        else if(rand == 9 || rand == 10){
            whiteEgg = goldenEgg;
            //addObject(whiteEgg, 100, 150);
         }
         
       return whiteEgg;
+    }
+    
+    public void playSound(){
+        int rand = (int)(Math.random() * 8) + 1;
+        String fileName = "";
+        
+        if(rand == 1){
+            fileName = "chicken1.mp3";
+        }
+        else if(rand == 2){
+            fileName = "chicken2.mp3";
+        }
+        else if(rand == 3){
+            fileName = "chicken3.mp3";
+        }
+        else if(rand == 4){
+            fileName = "chicken4.mp3";
+        }
+        else if(rand == 5){
+            fileName = "chicken5.mp3";
+        }
+        else if(rand == 6){
+            fileName = "chicken6.mp3";
+        }
+        else if(rand == 7){
+            fileName = "chicken7.mp3";
+        }
+        else if(rand == 8){
+            fileName = "chicken8.mp3";
+        }
+        
+        Greenfoot.playSound(fileName);
     }
 }

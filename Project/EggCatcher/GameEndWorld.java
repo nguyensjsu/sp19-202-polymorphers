@@ -6,13 +6,13 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Ending extends World
+public class GameEndWorld extends World
 {
     
     private StartButton startButton;
     private SwitchModeButton switchModeButton;
     private HighScore highscore;
-    private int finalscore;
+    private int currentscore;
     private Score score;
     private ArrayList<Actor> numberList;
     
@@ -20,7 +20,7 @@ public class Ending extends World
      * Constructor for objects of class Ending.
      * 
      */
-    public Ending(int finalscore)
+    public GameEndWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1);         
@@ -33,20 +33,20 @@ public class Ending extends World
         addObject(switchModeButton, 800, 450);
         addObject(highscore, 800, 500);
         
-        score = new Score(Integer.toString(finalscore));
+        // To do: Resolve the score issue (Class name)
+        /*score = new Score(Integer.toString(highscore));
         numberList = score.getNumberList();
         
         for(int i = 0; i < numberList.size(); i++ ){
             addObject(numberList.get(i), 530 + i*50, 290);
-        }
+        }*/
     }
     
-    
-    public void setFinalScore(int finalscore){
-        this.finalscore = finalscore;
+    public void setScore(int currentscore){
+        this.currentscore = currentscore;
     }
     
-    public int getFinalScore(){
-        return finalscore;
+    public int getScore(){
+        return currentscore;
     }
 }

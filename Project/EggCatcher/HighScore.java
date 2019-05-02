@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Implementation for Ranking Button class
  */
-public class RankingButton extends Button
+public class HighScore extends Button
 {
     GreenfootImage rankingButtonImage = new GreenfootImage("rankingButton.png");
     GreenfootImage rankingButtonPressedImage = 
@@ -11,7 +11,7 @@ public class RankingButton extends Button
     
     private boolean mouseDown;
     
-    public RankingButton(){
+    public HighScore(){
         mouseDown = false;
     }
     public void act() 

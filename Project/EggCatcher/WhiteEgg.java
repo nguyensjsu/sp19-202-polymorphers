@@ -26,17 +26,25 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
     public void act() 
     {   
         if (easyStrategy == true){
+<<<<<<< HEAD
+            
+            setLocation(this.getX(),this.getY()+4);
+        }
+        else if (easyStrategy == false){
+            setLocation(this.getX(),this.getY()+5);
+=======
         setLocation(this.getX(),this.getY()+2);
         }
         else if (easyStrategy == false){
         setLocation(this.getX(),this.getY()+4);
+>>>>>>> 7d5a8a636e50731a8959a66b3a3b7bd095bd94f4
         }
         /*
         if (getY() > 550) {
             getWorld().removeObject(this);
         }
         */
-       if (getY() > 550) {
+       if (getY() > 700) {
            // Egg missed
            getWorld().removeObject(this);
            notifyObservers();

@@ -30,6 +30,9 @@ public class Playing extends World
     private polymorphers Poly;
     private ArrayList<Actor> numberList = new ArrayList<>();
     
+    // Music
+    private GreenfootSound music = new GreenfootSound("chickenAttack.mp3");
+    
     private long lastAdded = System.currentTimeMillis();
 
     /**
@@ -45,7 +48,7 @@ public class Playing extends World
 
     public void init(){
         Greenfoot.setSpeed(100);
-        
+        music.playLoop();
         chicken1 = new Chicken();
         chicken2 = new Chicken();
         chicken3 = new Chicken();
@@ -113,6 +116,7 @@ public class Playing extends World
         
         if (eggMiss.lives < 1) {
             // switch to end world
+            music.stop();
             Greenfoot.setWorld(new Ending(board.score));
         }
         

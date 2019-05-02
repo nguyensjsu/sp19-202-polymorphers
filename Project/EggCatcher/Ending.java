@@ -11,7 +11,7 @@ public class Ending extends World
     
     private StartButton startButton;
     private SwitchModeButton switchModeButton;
-    private RankingButton rankingButton;
+    private HighScore highscore;
     private int finalscore;
     private Score score;
     private ArrayList<Actor> numberList;
@@ -27,11 +27,11 @@ public class Ending extends World
         
         startButton = new StartButton();
         switchModeButton = new SwitchModeButton();
-        rankingButton = new RankingButton();
+        highscore = new HighScore();
         
         addObject(startButton, 800, 400);
         addObject(switchModeButton, 800, 450);
-        addObject(rankingButton, 800, 500);
+        addObject(highscore, 800, 500);
         
         score = new Score(Integer.toString(finalscore));
         numberList = score.getNumberList();

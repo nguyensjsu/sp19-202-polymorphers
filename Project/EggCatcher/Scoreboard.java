@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Scoreboard extends Actor implements IScoreObserver
 {
     public int score = 0;
+    public int highscore = 0;
     /**
      * Act - do whatever the Scoreboard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -23,6 +24,8 @@ public class Scoreboard extends Actor implements IScoreObserver
      */
     public void scoreUpdate(IEgg e) {
         score += e.eggValue();
-        //System.out.println(score);
+        
+        if ( score > highscore ) 
+            highscore = score;
     }
 }

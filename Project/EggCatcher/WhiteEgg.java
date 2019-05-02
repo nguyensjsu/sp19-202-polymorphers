@@ -26,10 +26,10 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
     public void act() 
     {   
         if (easyStrategy == true){
-        setLocation(this.getX(),this.getY()+4);
+        setLocation(this.getX(),this.getY()+2);
         }
         else if (easyStrategy == false){
-        setLocation(this.getX(),this.getY()+5);
+        setLocation(this.getX(),this.getY()+4);
         }
         /*
         if (getY() > 550) {

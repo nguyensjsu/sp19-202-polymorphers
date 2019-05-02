@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=Scoreboard
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Scoreboard\ here.\r\n\ \r\n\ @author\ Shivam\ Waghela\ \r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Scoreboard\ here.\n\ \n\ @author\ Shivam\ Waghela\ \n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Scoreboard\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Scoreboard\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=e
 comment2.target=void\ scoreUpdate(IEgg)
-comment2.text=\r\n\ Update\ the\ score\r\n
+comment2.text=\n\ Update\ the\ score\n
 numComments=3

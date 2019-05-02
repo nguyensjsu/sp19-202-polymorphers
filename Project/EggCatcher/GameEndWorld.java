@@ -11,8 +11,8 @@ public class GameEndWorld extends World
     
     private StartButton startButton;
     private SwitchModeButton switchModeButton;
-    private RankingButton rankingButton;
-    private int highscore;
+    private HighScore highscore;
+    private int currentscore;
     private Score score;
     private ArrayList<Actor> numberList;
     
@@ -27,13 +27,11 @@ public class GameEndWorld extends World
         
         startButton = new StartButton();
         switchModeButton = new SwitchModeButton();
-        rankingButton = new RankingButton();
+        highscore = new HighScore();
         
         addObject(startButton, 800, 400);
         addObject(switchModeButton, 800, 450);
-        addObject(rankingButton, 800, 500);
-        
-        highscore = 123456790;
+        addObject(highscore, 800, 500);
         
         // To do: Resolve the score issue (Class name)
         /*score = new Score(Integer.toString(highscore));
@@ -44,11 +42,11 @@ public class GameEndWorld extends World
         }*/
     }
     
-    public void setHighScore(int highscore){
-        this.highscore = highscore;
+    public void setScore(int currentscore){
+        this.currentscore = currentscore;
     }
     
-    public int getHighScore(){
-        return highscore;
+    public int getScore(){
+        return currentscore;
     }
 }

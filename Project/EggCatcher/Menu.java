@@ -10,7 +10,7 @@ public class Menu extends World
 {
     private StartButton startButton;
     private SwitchModeButton switchModeButton;
-    private RankingButton rankingButton;
+    private HighScore highscore;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -22,10 +22,10 @@ public class Menu extends World
         super(1280, 720, 1); 
         startButton = new StartButton();
         switchModeButton = new SwitchModeButton();
-        rankingButton = new RankingButton();
+        highscore = new HighScore();
         
         addObject(startButton, 640, 300);
         addObject(switchModeButton, 640, 350);
-        addObject(rankingButton, 640, 400);
+        addObject(highscore, 640, 400);
     }
 }

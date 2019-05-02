@@ -8,12 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class polymorphers extends Actor
 {
-    /**
-     * Act - do whatever the polymorphers wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private GifImage polymorphers = new GifImage("Polymorphers.gif");
+    
+    public polymorphers(){
+        for (GreenfootImage img : polymorphers.getImages()) {
+            img.scale(230, 215);
+        }
+        
+    }
+    
     public void act() 
     {
-        // Add your action code here.
+        setImage(polymorphers.getCurrentImage());
     }    
 }

@@ -17,20 +17,19 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
     }
     public void easy(){
         boolean easyStrategy = true;
-        System.out.println("Called WhiteEgg Easy");
     }
     public void hard(){
         boolean easyStrategy = false;
-        System.out.println("Called WhiteEgg Hard");
+        
     }
     
     public void act() 
     {   
         if (easyStrategy == true){
-        setLocation(this.getX(),this.getY()+2);
+        setLocation(this.getX(),this.getY()+4);
         }
         else if (easyStrategy == false){
-        setLocation(this.getX(),this.getY()+3);
+        setLocation(this.getX(),this.getY()+5);
         }
         /*
         if (getY() > 550) {
@@ -39,7 +38,6 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
         */
        if (getY() > 550) {
            // Egg missed
-           System.out.println("egg missed");
            getWorld().removeObject(this);
            notifyObservers();
         }
@@ -71,7 +69,6 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
     public void notifyObservers() {
         for (IEggMissObserver o : observers) {
             o.eggMissUpdate();
-            System.out.println(o);
         }
     }
 }

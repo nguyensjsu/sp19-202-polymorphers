@@ -27,6 +27,7 @@ public class Playing extends World
     private Scoreboard board;
     private EggMiss eggMiss;
     private Score score;
+    private polymorphers Poly;
     private ArrayList<Actor> numberList = new ArrayList<>();
     
     private long lastAdded = System.currentTimeMillis();
@@ -58,6 +59,7 @@ public class Playing extends World
         extraWhiteEgg = new WhiteEgg();
         silverEgg = new SilverEggDecorator();
         goldenEgg = new GoldenEggDecorator();
+        Poly = new polymorphers();
         basket = new Basket();
 
         addObject(chicken1, 100, 120);
@@ -65,6 +67,7 @@ public class Playing extends World
         addObject(chicken3, 580, 120);
         addObject(chicken4, 820, 120);
         addObject(basket, 1150, 660);
+        addObject(Poly, 1120, 260);
 
         addObject(rabbit, 640, 610);
        
@@ -114,7 +117,6 @@ public class Playing extends World
         }
         
         // show lives aka broken eggs'
-        // System.out.println(eggMiss.lives);
         switch (eggMiss.lives) {
             case 3: break; // don't display anything
             case 2: 

@@ -123,12 +123,15 @@ public class Playing extends World
         // show lives aka broken eggs'
         switch (eggMiss.lives) {
             case 3: break; // don't display anything
-            case 2: 
+            case 2:
+                
                 addObject(brokenEgg, 1020, 437); break;
             case 1:
+                
                 addObject(brokenEgg, 1020, 437);
                 addObject(brokenEgg2, 1115, 437); break;
             case 0:
+                
                 addObject(brokenEgg, 1020, 437);
                 addObject(brokenEgg2, 1115, 437); 
                 addObject(brokenEgg3, 1210, 437); break;

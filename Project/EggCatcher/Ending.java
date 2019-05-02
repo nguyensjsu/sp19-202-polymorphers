@@ -28,14 +28,14 @@ public class Ending extends World
        // Greenfoot.playSound("youSuck.mp3");
         startButton = new StartButton();
         switchModeButton = new SwitchModeButton();
-<<<<<<< HEAD
-        rankingButton = new RankingButton();
+
+        
         //lyric = new Lyric();
         //addObject(lyric, 700, 200);
-=======
+
         highscore = new HighScore();
         
->>>>>>> 7d5a8a636e50731a8959a66b3a3b7bd095bd94f4
+ 
         addObject(startButton, 800, 400);
         addObject(switchModeButton, 800, 450);
         addObject(highscore, 800, 500);

@@ -11,7 +11,7 @@
 5. Help teammate finializing the project
 
 
-### My XP value is Communication:
+###My XP value is Communication:
 1. Feedback for code clean up and other technical priorties
 
 ### What next?
@@ -34,7 +34,7 @@
 	- Egg only spawned one type
 	- Use delay timer for solving problems
 
-### My XP value is Communication:
+###My XP value is Communication:
 1. Asked my teammate if they need help
 2. Asked my teammate what I should focus next
 
@@ -56,7 +56,7 @@ Shivam is waiting for my basket to do State pattern
 4. Added Greenfoot Worlds to the game along with decorating 
 5. Make the rabbit run
 
-### My XP value is Communication:
+###My XP value is Communication:
 1. Let my teammates know about my progress
 
 ### What next?
@@ -76,7 +76,7 @@ None
 3. Initialized the project 
 4. Talk with team how the game should look like
 
-### My XP value is Communication:
+###My XP value is Communication:
 1. Schedule meeting with my teammates
 2. Continuously letting them know what I have found during my research
 

@@ -64,7 +64,6 @@ public class Playing extends World
         goldenEgg = new GoldenEggDecorator(initial);
         Poly = new polymorphers();
         basket = new Basket();
-        System.out.println(initial);
 
         addObject(chicken1, 100, 120);
         addObject(chicken2, 340, 120);

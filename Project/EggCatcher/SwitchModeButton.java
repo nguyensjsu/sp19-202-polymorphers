@@ -8,7 +8,6 @@ public class SwitchModeButton extends Button
     GreenfootImage switchButtonImage = new GreenfootImage("switchModeButton.png");
     GreenfootImage switchButtonPressedImage = 
     new GreenfootImage("switchModeButtonPressed.png");
-    private boolean easyStrategy = true; // easyMode
     private IDifficultyStrategy easyMode;
     private IDifficultyStrategy hardMode;
    

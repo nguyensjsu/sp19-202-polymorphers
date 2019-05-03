@@ -15,6 +15,7 @@ public class Ending extends World
     private int finalscore;
     private Score score;
     private ArrayList<Actor> numberList;
+    //private Lyric lyric;
     
     /**
      * Constructor for objects of class Ending.
@@ -24,11 +25,17 @@ public class Ending extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1);         
-        
+       // Greenfoot.playSound("youSuck.mp3");
         startButton = new StartButton();
         switchModeButton = new SwitchModeButton();
+
+        
+        //lyric = new Lyric();
+        //addObject(lyric, 700, 200);
+
         highscore = new HighScore();
         
+ 
         addObject(startButton, 800, 400);
         addObject(switchModeButton, 800, 450);
         addObject(highscore, 800, 500);
@@ -41,6 +48,9 @@ public class Ending extends World
         }
     }
     
+    public void act(){
+        
+    }
     
     public void setFinalScore(int finalscore){
         this.finalscore = finalscore;

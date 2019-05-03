@@ -11,7 +11,7 @@ public class Menu extends World
     private StartButton startButton;
     private SwitchModeButton switchModeButton;
     private HighScore highscore;
-    
+    public static IDifficultyStrategy initialStrategy;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -27,5 +27,9 @@ public class Menu extends World
         addObject(startButton, 640, 300);
         addObject(switchModeButton, 640, 350);
         addObject(highscore, 640, 400);
+    }
+    
+    public void act() {
+        showText(initialStrategy.getMode(), 1200, 20);
     }
 }

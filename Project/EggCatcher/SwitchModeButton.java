@@ -8,37 +8,45 @@ public class SwitchModeButton extends Button
     GreenfootImage switchButtonImage = new GreenfootImage("switchModeButton.png");
     GreenfootImage switchButtonPressedImage = 
     new GreenfootImage("switchModeButtonPressed.png");
-    
-    private boolean mouseDown;
-    boolean toggle = true;
+    private boolean easyStrategy = true; // easyMode
+    private IDifficultyStrategy easyMode;
+    private IDifficultyStrategy hardMode;
+   
     
     public SwitchModeButton(){
         setImage(switchButtonImage);
-        mouseDown = false;
+        
+        easyMode = new IDifficultyStrategy() {
+            public int getSpeed() {
+               return 2;
+            }
+            public String getMode() {
+                return "Easy Mode";
+            }
+        };
+        
+        hardMode = new IDifficultyStrategy() {
+            public int getSpeed() {
+               return 4;
+            }
+            public String getMode() {
+                return "Hard Mode";
+            }
+        };
+        
+        Menu.initialStrategy = easyMode;
     }
     
     public void act() 
     {
-        
-        if (!mouseDown && Greenfoot.mousePressed(this)) {    
-            setImage(switchButtonPressedImage);
-            mouseDown = true; // here
-        }    
-        if (mouseDown && Greenfoot.mouseClicked(this)) {                
-            setImage(switchButtonImage);
-            mouseDown = false; 
-            if(toggle == true){
-               EasyStrategy easy = new EasyStrategy();
-               easy.setMode();
-               toggle = false;
+        if (Greenfoot.mouseClicked(this)) {                
+            if ( Menu.initialStrategy == hardMode ) {
+                // easy
+                Menu.initialStrategy = easyMode;
+            } else if (Menu.initialStrategy == easyMode) {
+                //hard
+                Menu.initialStrategy = hardMode;
             }
-            
-            else if (toggle == false){
-                HardStrategy hard = new HardStrategy();
-                hard.setMode();
-                toggle = true;
-            }
-            //add also the methods you want to execute here;  
         }
     }    
 }

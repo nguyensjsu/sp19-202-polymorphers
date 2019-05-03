@@ -9,33 +9,22 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
 {
     private GreenfootImage whiteEggImage = new GreenfootImage("WhiteEgg.png");
     private ArrayList<IEggMissObserver> observers = new ArrayList<>();
-    boolean easyStrategy;
+    private IDifficultyStrategy currentMode;
     
-    public WhiteEgg(){
+    public WhiteEgg() {
+    }
+    
+    public WhiteEgg(IDifficultyStrategy initial){
         whiteEggImage.scale(25,39);
-        setImage(whiteEggImage);
+        setImage(whiteEggImage);    
+        currentMode = initial;
     }
-    public void easy(){
-        boolean easyStrategy = true;
-    }
-    public void hard(){
-        boolean easyStrategy = false;
-        
-    }
+  
     
     public void act() 
     {   
-        if (easyStrategy == true){
-        setLocation(this.getX(),this.getY()+2);
-        }
-        else if (easyStrategy == false){
-        setLocation(this.getX(),this.getY()+4);
-        }
-        /*
-        if (getY() > 550) {
-            getWorld().removeObject(this);
-        }
-        */
+           setLocation(this.getX(),this.getY() + currentMode.getSpeed());
+ 
        if (getY() > 550) {
            // Egg missed
            getWorld().removeObject(this);
@@ -71,4 +60,5 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
             o.eggMissUpdate();
         }
     }
+    
 }

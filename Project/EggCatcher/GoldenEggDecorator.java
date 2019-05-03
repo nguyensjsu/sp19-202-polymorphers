@@ -6,13 +6,15 @@ public class GoldenEggDecorator extends WhiteEgg
     /**
      * Constructor for objects of class GoldenEggDecorator
      */
-    public GoldenEggDecorator()
+    public GoldenEggDecorator(IDifficultyStrategy initial)
     {
+        super(initial);
         goldenEggImage.scale(30,35);
         setImage(goldenEggImage);
     }
     
-    
+    public GoldenEggDecorator() {
+    }
     
     /**
      * An example of a method - replace this comment with your own

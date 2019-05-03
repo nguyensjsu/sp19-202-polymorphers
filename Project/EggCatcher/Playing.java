@@ -31,15 +31,15 @@ public class Playing extends World
     private ArrayList<Actor> numberList = new ArrayList<>();
     
     private long lastAdded = System.currentTimeMillis();
-
+    private IDifficultyStrategy initial;
     /**
      * Constructor for objects of class Playing.
      * 
      */
-    public Playing()
+    public Playing(IDifficultyStrategy initial)
     {    
         super(1280, 720, 1);
-
+        this.initial = initial;
         init();
     }
 
@@ -55,12 +55,13 @@ public class Playing extends World
         brokenEgg2 = new BrokenEgg();
         brokenEgg3 = new BrokenEgg();
         
-        whiteEgg = new WhiteEgg();
-        extraWhiteEgg = new WhiteEgg();
-        silverEgg = new SilverEggDecorator();
-        goldenEgg = new GoldenEggDecorator();
+        whiteEgg = new WhiteEgg(initial);
+        extraWhiteEgg = new WhiteEgg(initial);
+        silverEgg = new SilverEggDecorator(initial);
+        goldenEgg = new GoldenEggDecorator(initial);
         Poly = new polymorphers();
         basket = new Basket();
+        System.out.println(initial);
 
         addObject(chicken1, 100, 120);
         addObject(chicken2, 340, 120);

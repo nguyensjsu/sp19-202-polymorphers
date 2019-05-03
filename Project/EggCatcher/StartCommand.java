@@ -10,6 +10,6 @@ public class StartCommand implements IMenuCommand
 {
   
     public void execute(){
-       Greenfoot.setWorld(new Playing());
+       Greenfoot.setWorld(new Playing(Menu.initialStrategy));
     }
 }

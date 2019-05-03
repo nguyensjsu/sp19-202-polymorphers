@@ -2,7 +2,7 @@
 comment0.target=SilverEggDecorator
 comment1.params=initial
 comment1.target=SilverEggDecorator(IDifficultyStrategy)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ SilverEggDecorator\n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ SilverEggDecorator\r\n
 comment2.params=
 comment2.target=SilverEggDecorator()
 comment3.params=

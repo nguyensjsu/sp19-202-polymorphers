@@ -25,7 +25,7 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
     {   
            setLocation(this.getX(),this.getY() + currentMode.getSpeed());
  
-       if (getY() > 550) {
+       if (getY() > 700) {
            // Egg missed
            Greenfoot.playSound("eggDrop.mp3");
            getWorld().removeObject(this);

@@ -47,6 +47,7 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
         
         // go back to no egg state when it empties in the collector
         if (isTouching(Basket.class) && !(current instanceof NoEggState)) {
+            Greenfoot.playSound("dumping.mp3");
             current = new NoEggState();
             for (IEgg egg : eggList) {
                 notifyObservers(egg);

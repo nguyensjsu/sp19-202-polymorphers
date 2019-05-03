@@ -18,7 +18,7 @@ public class SwitchModeButton extends Button
         
         easyMode = new IDifficultyStrategy() {
             public int getSpeed() {
-               return 2;
+               return 3;
             }
             public String getMode() {
                 return "Easy Mode";

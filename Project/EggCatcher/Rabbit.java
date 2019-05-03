@@ -53,7 +53,6 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
                 notifyObservers(egg);
             }
             eggList = new ArrayList();
-            
         }
         
         if (isTouching(GoldenEggDecorator.class) ) {
@@ -91,7 +90,9 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
         }
         
        String image = "RabbitNoEggState.png";
-       if ( current instanceof NoEggState ) {
+       if ( isTouching(Basket.class)  ) {
+           image = "RabbitDump.png";
+       } else if ( current instanceof NoEggState ) {
            image = "RabbitNoEggState.png";
        } else if ( current instanceof OneEggState ) {
            image = "RabbitOneEggState.png";
@@ -99,7 +100,7 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
            image = "RabbitTwoEggState.png";
        } else if ( current instanceof ThreeEggState || current instanceof FullEggState ) {
            image = "RabbitThreeEggState.png";
-        }
+       } 
        rabbitImage = new GreenfootImage(image);
        rabbitImage.scale(203, 219);
        setImage(rabbitImage);

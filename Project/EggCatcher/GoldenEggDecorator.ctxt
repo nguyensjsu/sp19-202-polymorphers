@@ -2,10 +2,10 @@
 comment0.target=GoldenEggDecorator
 comment1.params=initial
 comment1.target=GoldenEggDecorator(IDifficultyStrategy)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GoldenEggDecorator\r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ GoldenEggDecorator\n
 comment2.params=
 comment2.target=GoldenEggDecorator()
 comment3.params=
 comment3.target=int\ eggValue()
-comment3.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment3.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
 numComments=4

@@ -31,7 +31,7 @@ public class Playing extends World
     private ArrayList<Actor> numberList = new ArrayList<>();
     
     // Music
-    private GreenfootSound music = new GreenfootSound("chickenAttack.mp3");
+    private GreenfootSound music = new GreenfootSound("farm-ambience.mp3");
     
     private long lastAdded = System.currentTimeMillis();
     private IDifficultyStrategy initial;

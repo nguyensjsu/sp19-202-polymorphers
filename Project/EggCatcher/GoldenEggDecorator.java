@@ -6,7 +6,7 @@ public class GoldenEggDecorator extends WhiteEgg
     /**
      * Constructor for objects of class GoldenEggDecorator
      */
-    public GoldenEggDecorator(IDifficultyStrategy initial)
+    public GoldenEggDecorator(IGameDifficultyStrategy initial)
     {
         super(initial);
         goldenEggImage.scale(30,35);
@@ -22,7 +22,7 @@ public class GoldenEggDecorator extends WhiteEgg
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int eggValue()
+    public int getEggValue()
     {
         return 10;
     }

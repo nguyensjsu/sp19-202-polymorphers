@@ -9,12 +9,12 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
 {
     private GreenfootImage whiteEggImage = new GreenfootImage("WhiteEgg.png");
     private ArrayList<IEggMissObserver> observers = new ArrayList<>();
-    private IDifficultyStrategy currentMode;
+    private IGameDifficultyStrategy currentMode;
     
     public WhiteEgg() {
     }
     
-    public WhiteEgg(IDifficultyStrategy initial){
+    public WhiteEgg(IGameDifficultyStrategy initial){
         whiteEggImage.scale(25,39);
         setImage(whiteEggImage);    
         currentMode = initial;
@@ -33,7 +33,7 @@ public class WhiteEgg extends Actor implements IEgg, IEggMissSubject
         }
     }
     
-    public int eggValue(){
+    public int getEggValue(){
         return 1;
     }
     

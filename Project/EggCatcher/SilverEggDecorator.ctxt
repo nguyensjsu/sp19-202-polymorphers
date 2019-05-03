@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=SilverEggDecorator
 comment1.params=initial
-comment1.target=SilverEggDecorator(IDifficultyStrategy)
+comment1.target=SilverEggDecorator(IGameDifficultyStrategy)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ SilverEggDecorator\n
 comment2.params=
 comment2.target=SilverEggDecorator()
 comment3.params=
-comment3.target=int\ eggValue()
+comment3.target=int\ getEggValue()
 numComments=4

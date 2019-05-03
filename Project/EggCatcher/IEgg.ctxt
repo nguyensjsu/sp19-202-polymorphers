@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=IEgg
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ IEgg\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ IEgg\ .\n\ \n\ @author\ Phuong\ Tran\n
 comment1.params=
-comment1.target=int\ eggValue()
+comment1.target=int\ getEggValue()
 numComments=2

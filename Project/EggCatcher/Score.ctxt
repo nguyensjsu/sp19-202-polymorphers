@@ -1,8 +1,7 @@
 #BlueJ class context
 comment0.target=Score
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Score\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=highscore
-comment1.target=Score(java.lang.String)
-comment2.params=
-comment2.target=java.util.ArrayList\ getNumberList()
-numComments=3
+comment0.text=\n\ Score\ class\ will\ keep\ track\ of\ current\ and\ highscore\n\ \n\ @author\ Shivam\ Waghela\ \n
+comment1.params=e
+comment1.target=void\ scoreUpdate(IEgg)
+comment1.text=\n\ Update\ the\ score\n
+numComments=2

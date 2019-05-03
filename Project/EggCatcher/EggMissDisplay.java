@@ -4,14 +4,14 @@ import greenfoot.*;
  * 
  * @author Shivam Waghela
  */
-public class EggMiss extends Actor implements IEggMissObserver
+public class EggMissDisplay extends Actor implements IEggMissObserver
 {
     public int lives = 3;
 
     /**
      * Constructor for objects of class EggMiss
      */
-    public EggMiss()
+    public EggMissDisplay()
     {
     }
 

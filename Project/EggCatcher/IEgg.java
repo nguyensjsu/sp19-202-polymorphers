@@ -1,11 +1,9 @@
 /**
- * Write a description of class IEgg here.
+ * IEgg .
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Phuong Tran
  */
 public interface IEgg  
 {
-    public int eggValue();
-    
+    int getEggValue();
 }

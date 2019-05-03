@@ -4,18 +4,17 @@ import java.util.ArrayList;
 /**
  * Write a description of class Chicken here.
  * 
- * @author Shivam Waghela
+ * @author Shivam Waghela, Phuong Tran
  */
 public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
 {
-    private int speed = 5;
     private GreenfootImage rabbitImage = new GreenfootImage("RabbitNoEggState.png");
-    private ArrayList<IScoreObserver> observers = new ArrayList<>();
+    private ArrayList<IScoreObserver> scoreObservers = new ArrayList<>();
     private ArrayList<IEgg> eggList = new ArrayList<>();
     private ArrayList<IEggMissObserver> eggMissObservers = new ArrayList<>();
     
     /* stores the state of rabbit */
-    private IEggState current = new NoEggState();
+    private IEggState currentState = new NoEggState();
     
     public Rabbit() {
         rabbitImage.scale(203, 219);
@@ -24,31 +23,30 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
     
     public void act() 
     {
-        
         int x = getX();
         int y = getY();
  
-        if(Greenfoot.isKeyDown("left")){
-            if (x <= 100){
+        if(Greenfoot.isKeyDown("left")) {
+            if (x <= 100) {
                 setLocation(x, y);
             }
             else{
-            setLocation(x-10, y);
-        }
-        }else if(Greenfoot.isKeyDown("right")){
-            if(x >= 1000){
+                setLocation(x-10, y);
+            }
+        } else if(Greenfoot.isKeyDown("right")) {
+            if (x >= 1000) {
                 setLocation(x, y);
             }
-            else{
-            setLocation(x+10, y);
-        }
+            else {
+                setLocation(x+10, y);
+            }
         }
         
         
         // go back to no egg state when it empties in the collector
-        if (isTouching(Basket.class) && !(current instanceof NoEggState)) {
+        if (isTouching(Basket.class) && !(currentState instanceof NoEggState)) {
             Greenfoot.playSound("dumping.mp3");
-            current = new NoEggState();
+            currentState = new NoEggState();
             for (IEgg egg : eggList) {
                 notifyObservers(egg);
             }
@@ -57,9 +55,8 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
         
         if (isTouching(GoldenEggDecorator.class) ) {
             removeTouching(GoldenEggDecorator.class);
-            current = current.nextState();
-            if (!(current instanceof FullEggState)){ 
-                //removeTouching(GoldenEggDecorator.class);
+            currentState = currentState.nextState();
+            if (!(currentState instanceof FullEggState)){ 
                 eggList.add(new GoldenEggDecorator());
                 Greenfoot.playSound("catch.mp3");
                 
@@ -68,9 +65,8 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
                 notifyObservers();
         } else if (isTouching(SilverEggDecorator.class) ) {
             removeTouching(SilverEggDecorator.class);
-            current = current.nextState();
-            if (!(current instanceof FullEggState)){
-                //removeTouching(SilverEggDecorator.class);
+            currentState = currentState.nextState();
+            if (!(currentState instanceof FullEggState)) {
                 Greenfoot.playSound("catch.mp3");
                 eggList.add(new SilverEggDecorator());
                 
@@ -79,9 +75,8 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
                 notifyObservers();
         } else if (isTouching(WhiteEgg.class) ) {
             removeTouching(WhiteEgg.class);
-            current = current.nextState();
-            if (!(current instanceof FullEggState)){
-                //removeTouching(WhiteEgg.class);
+            currentState = currentState.nextState();
+            if (!(currentState instanceof FullEggState)){
                 Greenfoot.playSound("catch.mp3");
                 eggList.add(new WhiteEgg());
             }
@@ -92,13 +87,13 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
        String image = "RabbitNoEggState.png";
        if ( isTouching(Basket.class)  ) {
            image = "RabbitDump.png";
-       } else if ( current instanceof NoEggState ) {
+       } else if ( currentState instanceof NoEggState ) {
            image = "RabbitNoEggState.png";
-       } else if ( current instanceof OneEggState ) {
+       } else if ( currentState instanceof OneEggState ) {
            image = "RabbitOneEggState.png";
-       } else if ( current instanceof TwoEggState ) {
+       } else if ( currentState instanceof TwoEggState ) {
            image = "RabbitTwoEggState.png";
-       } else if ( current instanceof ThreeEggState || current instanceof FullEggState ) {
+       } else if ( currentState instanceof ThreeEggState || currentState instanceof FullEggState ) {
            image = "RabbitThreeEggState.png";
        } 
        rabbitImage = new GreenfootImage(image);
@@ -112,7 +107,7 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
      * @param obj Observer Object
      */
     public void addObserver( IScoreObserver obj ) {
-        observers.add(obj);
+        scoreObservers.add(obj);
     }
 
     /**
@@ -120,14 +115,14 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
      * @param obj Observer Object
      */
     public void removeObserver( IScoreObserver obj ) {
-        observers.remove(obj);
+        scoreObservers.remove(obj);
     }
 
     /**
      * Trigger Events to Observers
      */
     public void notifyObservers(IEgg e) {
-        for (IScoreObserver o : observers) {
+        for (IScoreObserver o : scoreObservers) {
             o.scoreUpdate(e);
         }   
     }

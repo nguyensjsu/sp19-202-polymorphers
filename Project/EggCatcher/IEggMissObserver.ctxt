@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=IEggMissObserver
-comment0.text=\r\n\ IEggMissObserver\ is\ an\ interface.\r\n\ \r\n\ @author\ Shivam\ Waghela\ \r\n
+comment0.text=\n\ IEggMissObserver\ is\ an\ interface.\n\ \n\ @author\ Shivam\ Waghela\ \n
 comment1.params=
 comment1.target=void\ eggMissUpdate()
-comment1.text=\r\n\ Update\ the\ Egg\ miss\ count\ \r\n
+comment1.text=\n\ Update\ the\ Egg\ miss\ count\ \n
 numComments=2

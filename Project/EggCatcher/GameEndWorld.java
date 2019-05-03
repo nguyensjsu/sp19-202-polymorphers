@@ -3,17 +3,17 @@ import java.util.*;
 /**
  * Write a description of class Ending here.
  * 
- * @author (your name) 
+ * @author Shivam Waghela, Phuong Tran
  * @version (a version number or a date)
  */
-public class Ending extends World
+public class GameEndWorld extends World
 {
     
-    private StartButton startButton;
-    private SwitchModeButton switchModeButton;
-    private HighScore highscore;
+    private GameStartButton gameStartButton;
+    private SwitchGameModeButton switchGameModeButton;
+    private HighScoreButton highscoreButton;
     private int finalscore;
-    private Score score;
+    private ScoreDisplay scoreDisplay;
     private ArrayList<Actor> numberList;
     //private Lyric lyric;
     
@@ -21,27 +21,27 @@ public class Ending extends World
      * Constructor for objects of class Ending.
      * 
      */
-    public Ending(int finalscore)
+    public GameEndWorld(int finalscore)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1);         
        // Greenfoot.playSound("youSuck.mp3");
-        startButton = new StartButton();
-        switchModeButton = new SwitchModeButton();
+        gameStartButton = new GameStartButton();
+        switchGameModeButton = new SwitchGameModeButton();
 
         
         //lyric = new Lyric();
         //addObject(lyric, 700, 200);
 
-        highscore = new HighScore();
+        highscoreButton = new HighScoreButton();
         
  
-        addObject(startButton, 800, 400);
-        addObject(switchModeButton, 800, 450);
-        addObject(highscore, 800, 500);
+        addObject(gameStartButton, 800, 400);
+        addObject(switchGameModeButton, 800, 450);
+        addObject(highscoreButton, 800, 500);
         
-        score = new Score(Integer.toString(finalscore));
-        numberList = score.getNumberList();
+        scoreDisplay = new ScoreDisplay(Integer.toString(finalscore));
+        numberList = scoreDisplay.getNumberList();
         
         for(int i = 0; i < numberList.size(); i++ ){
             addObject(numberList.get(i), 530 + i*50, 290);

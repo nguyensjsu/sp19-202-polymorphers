@@ -3,14 +3,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Implementation for the start button
  */
-public class StartButton extends Button
+public class GameStartButton extends Button
 {
     GreenfootImage startButtonImage = new GreenfootImage("startButton.png");
     GreenfootImage startButtonPressedImage = 
     new GreenfootImage("startButtonPressed.png");
     private boolean mouseDown;
     
-    public StartButton(){
+    public GameStartButton(){
         setImage(startButtonImage);
         mouseDown = false;
     }
@@ -27,7 +27,7 @@ public class StartButton extends Button
             mouseDown = false; 
             //Switch to playing world
             //Greenfoot.setWorld(new Playing());
-            StartCommand start = new StartCommand();
+            GameStartCommand start = new GameStartCommand();
             start.execute();
             //add also the methods you want to execute here;
             

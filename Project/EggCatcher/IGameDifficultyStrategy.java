@@ -3,7 +3,7 @@
  * 
  * @author Viraj Upadhyay
  */
-public interface IDifficultyStrategy  
+public interface IGameDifficultyStrategy  
 {
     // instance variables - replace the example below with your own
    int getSpeed();

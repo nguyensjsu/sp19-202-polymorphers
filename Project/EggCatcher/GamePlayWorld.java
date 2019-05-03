@@ -8,9 +8,9 @@ import java.util.ArrayList;
  * @version (a version number or a date)
  */
 
-public class Playing extends World
+public class GamePlayWorld extends World
 {
-    private Ending gameEndWorld;
+    private GameEndWorld gameEndWorld;
     private Rabbit rabbit;
     private Chicken chicken1;
     private Chicken chicken2;
@@ -24,9 +24,9 @@ public class Playing extends World
     private WhiteEgg goldenEgg;
     private WhiteEgg silverEgg;
     private Basket basket;
-    private Scoreboard board;
-    private EggMiss eggMiss;
     private Score score;
+    private EggMissDisplay eggMissDisplay;
+    private ScoreDisplay scoreDisplay;
     private polymorphers Poly;
     private ArrayList<Actor> numberList = new ArrayList<>();
     
@@ -34,12 +34,12 @@ public class Playing extends World
     private GreenfootSound music = new GreenfootSound("farm-ambience.mp3");
     
     private long lastAdded = System.currentTimeMillis();
-    private IDifficultyStrategy initial;
+    private IGameDifficultyStrategy initial;
     /**
      * Constructor for objects of class Playing.
      * 
      */
-    public Playing(IDifficultyStrategy initial)
+    public GamePlayWorld(IGameDifficultyStrategy initial)
     {    
         super(1280, 720, 1);
         this.initial = initial;
@@ -76,15 +76,15 @@ public class Playing extends World
        
         
         // Add observer for scoreboard
-        board = new Scoreboard();
-        rabbit.addObserver(board);
+        score = new Score();
+        rabbit.addObserver(score);
         
         // Add observer for Lives
-        eggMiss = new EggMiss();
-        extraWhiteEgg.addObserver(eggMiss);
-        silverEgg.addObserver(eggMiss);
-        goldenEgg.addObserver(eggMiss);
-        rabbit.addObserver(eggMiss);
+        eggMissDisplay = new EggMissDisplay();
+        extraWhiteEgg.addObserver(eggMissDisplay);
+        silverEgg.addObserver(eggMissDisplay);
+        goldenEgg.addObserver(eggMissDisplay);
+        rabbit.addObserver(eggMissDisplay);
     }
 
     public void act() 
@@ -114,14 +114,14 @@ public class Playing extends World
             lastAdded  = curTime;
         }
         
-        if (eggMiss.lives < 1) {
+        if (eggMissDisplay.lives < 1) {
             // switch to end world
             music.stop();
-            Greenfoot.setWorld(new Ending(board.score));
+            Greenfoot.setWorld(new GameEndWorld(score.currentscore));
         }
         
         // show lives aka broken eggs'
-        switch (eggMiss.lives) {
+        switch (eggMissDisplay.lives) {
             case 3: break; // don't display anything
             case 2:
                 
@@ -143,8 +143,8 @@ public class Playing extends World
         for(int i = 0; i < numberList.size(); i++ ){
             removeObject(numberList.get(i));
         }
-        score = new Score(Integer.toString(board.score));
-        numberList = score.getNumberList();
+        scoreDisplay = new ScoreDisplay(Integer.toString(score.currentscore));
+        numberList = scoreDisplay.getNumberList();
         
         for(int i = 0; i < numberList.size(); i++ ){
             addObject(numberList.get(i), 1090 + i*50, 365);

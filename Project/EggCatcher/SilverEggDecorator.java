@@ -7,7 +7,7 @@ public class SilverEggDecorator extends WhiteEgg
     /**
      * Constructor for objects of class SilverEggDecorator
      */
-    public SilverEggDecorator(IDifficultyStrategy initial)
+    public SilverEggDecorator(IGameDifficultyStrategy initial)
     {
         super(initial);
         silverEggImage.scale(30,45);
@@ -17,9 +17,8 @@ public class SilverEggDecorator extends WhiteEgg
     public SilverEggDecorator() {
     }
 
-    
-    
-    public int eggValue()
+   
+    public int getEggValue()
     {
         return 5;
     }

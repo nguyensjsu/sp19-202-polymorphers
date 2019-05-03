@@ -1,21 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * implementation for SwitchModeButton
+ * implementation for SwitchGameModeButton
  */
-public class SwitchModeButton extends Button
+public class SwitchGameModeButton extends Button
 {
     GreenfootImage switchButtonImage = new GreenfootImage("switchModeButton.png");
     GreenfootImage switchButtonPressedImage = 
     new GreenfootImage("switchModeButtonPressed.png");
-    private IDifficultyStrategy easyMode;
-    private IDifficultyStrategy hardMode;
+    private IGameDifficultyStrategy easyMode;
+    private IGameDifficultyStrategy hardMode;
    
     
-    public SwitchModeButton(){
+    public SwitchGameModeButton(){
         setImage(switchButtonImage);
         
-        easyMode = new IDifficultyStrategy() {
+        easyMode = new IGameDifficultyStrategy() {
             public int getSpeed() {
                return 2;
             }
@@ -24,7 +24,7 @@ public class SwitchModeButton extends Button
             }
         };
         
-        hardMode = new IDifficultyStrategy() {
+        hardMode = new IGameDifficultyStrategy() {
             public int getSpeed() {
                return 4;
             }
@@ -33,18 +33,18 @@ public class SwitchModeButton extends Button
             }
         };
         
-        Menu.initialStrategy = easyMode;
+        GameMenuWorld.currentStrategy = easyMode;
     }
     
     public void act() 
     {
         if (Greenfoot.mouseClicked(this)) {                
-            if ( Menu.initialStrategy == hardMode ) {
+            if ( GameMenuWorld.currentStrategy == hardMode ) {
                 // easy
-                Menu.initialStrategy = easyMode;
-            } else if (Menu.initialStrategy == easyMode) {
+                GameMenuWorld.currentStrategy = easyMode;
+            } else if (GameMenuWorld.currentStrategy == easyMode) {
                 //hard
-                Menu.initialStrategy = hardMode;
+                GameMenuWorld.currentStrategy = hardMode;
             }
         }
     }    

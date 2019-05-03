@@ -58,22 +58,33 @@ public class Rabbit extends Actor implements IScoreSubject, IEggMissSubject
         if (isTouching(GoldenEggDecorator.class) ) {
             removeTouching(GoldenEggDecorator.class);
             current = current.nextState();
-            if (!(current instanceof FullEggState)) 
+            if (!(current instanceof FullEggState)){ 
+                //removeTouching(GoldenEggDecorator.class);
                 eggList.add(new GoldenEggDecorator());
+                Greenfoot.playSound("catch.mp3");
+                
+            }
             else
                 notifyObservers();
         } else if (isTouching(SilverEggDecorator.class) ) {
             removeTouching(SilverEggDecorator.class);
             current = current.nextState();
-            if (!(current instanceof FullEggState))
+            if (!(current instanceof FullEggState)){
+                //removeTouching(SilverEggDecorator.class);
+                Greenfoot.playSound("catch.mp3");
                 eggList.add(new SilverEggDecorator());
+                
+            }
             else
                 notifyObservers();
         } else if (isTouching(WhiteEgg.class) ) {
             removeTouching(WhiteEgg.class);
             current = current.nextState();
-            if (!(current instanceof FullEggState))
+            if (!(current instanceof FullEggState)){
+                //removeTouching(WhiteEgg.class);
+                Greenfoot.playSound("catch.mp3");
                 eggList.add(new WhiteEgg());
+            }
             else
                 notifyObservers();
         }

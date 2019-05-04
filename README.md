@@ -36,6 +36,8 @@ This game is built using Greenfoot and uses Greenfoot game engine. We have built
 https://docs.google.com/spreadsheets/d/1d4Fx4nz74geD6odnNHr545POQaJDJAT97vIY3Ihmx38/edit#gid=1461044506
 ### Burndown Chart:
 ![](https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/docs/BurnDown%20Chart%20-%20Polymorphers.png)
-### Individual Contributions:
 
-### Weekly Scrum:
+### Weekly Scrum and contributions:
+Shivam - https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/journal/Shivam%20Waghela%20Journal.md
+Phuong - https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/journal/Phuong%20Tran%20Journal.md
+Viraj - https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/journal/Viraj_Upadhyay_journal.md

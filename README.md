@@ -1,5 +1,6 @@
 # Egg Catcher by team Polymorphers
 This is a fun and easy to play game where you will prove yourself a real hero of egg catcher. You will be controlling a rabbit who will catch the falling eggs and collect them in a basket. The more eggs you collect, the more you score. White eggs carry one point each, whereas, Silver and Golden eggs carry five and ten points each respectively. You will get three chances of dropping the eggs after which the game will end. Challenge yourself to beat your previous high score and switch to a higher difficulty once you are a pro!
+
 ![](https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/docs/GamePlayImage.PNG)
 
 ## Video:

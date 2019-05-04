@@ -12,6 +12,9 @@ https://youtu.be/UmT3gPUSZKs
 * [Viraj Upadhyay](https://github.com/viraj1995)
 
 ## Project Details
+### Class diagram:
+![](https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/docs/Class%20Diagram.png)
+
 ### Use case specification:
 https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/docs/Use%20case%20specifications.pdf
 

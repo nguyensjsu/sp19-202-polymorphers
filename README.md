@@ -13,6 +13,7 @@ https://youtu.be/UmT3gPUSZKs
 ### Use case:
 
 ### Activity Diagram:
+![](https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/docs/Egg%20Catcher%20-%20Activity%20Diagram.png) 
 
 ### Design:
 This game is built using Greenfoot and uses Greenfoot game engine. We have built it from scratch without using existing codebase. We have implemented the following design patterns in its creation:
@@ -27,9 +28,9 @@ This game is built using Greenfoot and uses Greenfoot game engine. We have built
 
 ## Project Progress
 ### Sprint tasksheet:
-
+https://docs.google.com/spreadsheets/d/1d4Fx4nz74geD6odnNHr545POQaJDJAT97vIY3Ihmx38/edit#gid=1461044506
 ### Burndown Chart:
-
+![](https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/docs/BurnDown%20Chart%20-%20Polymorphers.png)
 ### Individual Contributions:
 
 ### Weekly Scrum:

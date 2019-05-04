@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Score
-comment0.text=\n\ Score\ class\ will\ keep\ track\ of\ current\ and\ highscore\n\ \n\ @author\ Shivam\ Waghela\ \n
+comment0.text=\r\n\ Score\ class\ will\ keep\ track\ of\ current\ and\ highscore\r\n\ \r\n\ @author\ Shivam\ Waghela\ \r\n
 comment1.params=e
 comment1.target=void\ scoreUpdate(IEgg)
-comment1.text=\n\ Update\ the\ score\n
+comment1.text=\r\n\ Update\ the\ score\r\n
 numComments=2

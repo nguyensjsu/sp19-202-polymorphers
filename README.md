@@ -10,8 +10,11 @@ https://youtu.be/UmT3gPUSZKs
 * [Viraj Upadhyay](https://github.com/viraj1995)
 
 ## Project Details
-### Use case:
+### Use case specification:
+https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/docs/Use%20case%20specifications.pdf
 
+### Use case diagram:
+![](https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/docs/Egg%20Catcher%20-%20Use%20case%20diagram.png)
 ### Activity Diagram:
 ![](https://github.com/nguyensjsu/sp19-202-polymorphers/blob/master/docs/Egg%20Catcher%20-%20Activity%20Diagram.png) 
 
